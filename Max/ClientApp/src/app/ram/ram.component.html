@@ -1,0 +1,29 @@
+<h1 id="tableLabel">All Ram</h1>
+
+<p *ngIf="!rams"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="rams">
+  <thead>
+    <tr>
+
+      <th>name</th>
+      <th>manufacturer</th>
+      <th>price</th>
+      <th>memoryCapacity</th>
+      <th>frequency</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ram of rams">
+
+      <td>{{ ram.name }}</td>
+      <td>{{ ram.manufacturer.name }}</td>
+      <td>{{ ram.price }}</td>
+      <td>{{ ram.memoryCapacity }}</td>
+      <td>{{ ram.frequency }}</td>
+
+    </tr>
+  </tbody>
+</table>
+

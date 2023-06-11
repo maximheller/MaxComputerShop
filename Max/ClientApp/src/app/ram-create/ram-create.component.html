@@ -1,0 +1,55 @@
+<div>
+
+  
+
+  <div class="form-group">
+    <label>memoryCapacity</label>
+    <input type="number" class="form-control" name="memoryCapacity" [(ngModel)]="memoryCapacity" />
+  </div>
+
+
+  <div class="form-group">
+    <label>frequency</label>
+    <input type="number" class="form-control" name="frequency" [(ngModel)]="frequency" />
+  </div>
+
+
+  <div class="form-group">
+    <label>name</label>
+    <input class="form-control" name="name" [(ngModel)]="name" />
+  </div>
+
+  <div class="form-group">
+    <label>description</label>
+    <input class="form-control" name="description" [(ngModel)]="description" />
+  </div>
+
+  <div class="form-group">
+    <label>price</label>
+    <input type="number" class="form-control" name="price" [(ngModel)]="price" />
+  </div>
+
+
+  <div class="form-group">
+    <button class="btn btn-default" (click)="addRam()">Create</button>
+  </div>
+
+
+
+
+  <div>
+
+
+
+    <select [ngModel]="selectedManufacturer" (ngModelChange)="onChangeObj($event)" name="sel3">
+      <option [ngValue]="manufacturer" *ngFor="let manufacturer of manufacturers">
+        {{manufacturer.name}}
+      </option>
+    </select>
+   
+
+
+  </div>
+
+
+</div>

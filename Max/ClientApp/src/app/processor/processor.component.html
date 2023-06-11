@@ -1,0 +1,27 @@
+<h1 id="tableLabel">All Processors</h1>
+
+<p>Processor component</p>
+
+<p *ngIf="!processors"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="processors">
+  <thead>
+    <tr>
+
+      <th>name</th>      
+      <th>description</th>
+      <th>frequency</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let processor of processors">
+
+      <td>{{ processor.name }}</td>    
+      <td>{{ processor.description }}</td>
+      <td>{{ processor.frequency }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
